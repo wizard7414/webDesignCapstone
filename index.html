@@ -1,0 +1,172 @@
+<!doctype html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>Victus Est - HTML5 project</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        let $controls = $("#menuScreensControls");
+        let $controlsItem = $("#menuScreensControls li");
+        let $menuImg = $("#menuScreens img");
+        let $foodMenuImg = $("#menuFoodScreens img");
+
+        $controls.on('mouseenter', 'li', function () {
+            $menuImg.removeClass("opaque");
+            $foodMenuImg.removeClass("opaque");
+            let newImage = $(this).index();
+            $menuImg.eq(newImage).addClass("opaque");
+            $foodMenuImg.eq(newImage).addClass("opaque");
+            $controlsItem.removeClass("selected");
+            $(this).addClass("selected");
+        });
+        $controls.on('mouseleave', 'li', function () {
+            $menuImg.removeClass("selected");
+            $menuImg.removeClass("opaque");
+            $foodMenuImg.removeClass("selected");
+            $foodMenuImg.removeClass("opaque");
+            $(this).removeClass("selected");
+            $(this).removeClass("opaque");
+        });
+    });
+</script>
+
+<header class="ve_header">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid d-flex justify-content-center">
+            <div class="d-flex">
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo_small.png" alt="Victus est logo">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse justify-content-lg-end" id="navbarSupportedContent">
+
+                <div class="collapse navbar-collapse ve-menu" id="navExpand">
+                    <ul class="navbar-nav navbar-light mr-auto mb-2 mb-lg-0 container-fluid d-flex justify-content-center"
+                        id="menuScreensControls">
+                        <li class="nav-item ve-nav-item" id="navToGreece">
+                            <a class="nav-link selected" href="./greece.html">Greece</a>
+                        </li>
+                        <li class="nav-item ve-nav-item" id="navToRome">
+                            <a class="nav-link" href="./rome.html">Rome</a>
+                        </li>
+                        <li class="nav-item ve-nav-item" id="navToEgypt">
+                            <a class="nav-link" href="./egypt.html">Egypt</a>
+                        </li>
+                        <li class="nav-item ve-nav-item" id="navToBabylon">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Babylon</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="d-flex">
+                    <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-dark" type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                             class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-light ve_nav container-fluid d-flex justify-content-center">
+        <div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent, #navExpand"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex">
+                <div id="menuScreens" class="">
+                    <img src="./img/greece/greece-nav.jpg" alt="Ancient Greece image"/>
+                    <img src="./img/rome/rome-nav.jpg" alt="Ancient Rome image"/>
+                    <img src="./img/egypt/egypt-nav.jpg" alt="Ancient Egypt image"/>
+                    <img src="./img/babylon/babylon-nav.jpg" alt="Ancient Babylon image"/>
+                </div>
+                <div id="menuFoodScreens" class="">
+                    <img src="./img/greece/greece-food-nav.jpg" alt="Ancient Greece food"/>
+                    <img src="./img/rome/rome-food-nav.jpg" alt="Ancient Rome food"/>
+                    <img src="./img/egypt/egypt-food-nav.jpg" alt="Ancient Egypt food"/>
+                    <img src="./img/babylon/babylon-food-nav.jpg" alt="Ancient Babylon food"/>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="ve-greeting">
+    <H2>Greeting</H2>
+
+        <img src="./img/food-main.jpg" alt="main food image"/>
+         <p>
+            In order to understand the evolution of food in the Ancient World and certain norms that would be
+            labelled as hygiene habits today, as with studying the Middle Ages, we need to differentiate Early
+            Antiquity from Late Antiquity.
+        </p>
+        <p>
+            The former began with the appearance of writing in around 3,300 BC, in the case of Ancient
+            Egypt and some Mesopotamian peoples, and lasted until the 5th century BC. Late Antiquity spanned
+            from this time until the 8th century AD.
+        </p>
+        <p>
+            There aren’t any specific documents from the first period, nor from much of the second, that talk
+            about food, much less so hygiene. Everything we know has come from archaeology, either through graphic
+            or monumental expressions or simply through analysis of waste in domestic containers. Thus, we know
+            much more than imagined at first sight.
+        </p>
+        <p>
+            There’s a lot of documentation from the second period (the period closest to us), and the closer you
+            get, the more there is. However, usually, it has to be taken from generalized texts.
+        </p>
+        <p>
+            Historians divide ancient civilizations into two categories: mainly agricultural cat ones (Egypt),
+            and livestock based dog ones (Assyria). However, for anthropologists, these two animals represent
+            carbohydrate and protein based civilizations.
+        </p>
+        <p>
+            Through carbon analysis of mummies or just bones that have been unearthed, these two cultures show a
+            difference in height and longevity favoring livestock farmers. We also know that while there are still
+            purely agricultural civilizations around today, civilizations that have livestock combine it with
+            agriculture; where cattle fodder grows, so does cereal. At present, there is a tribe in Africa,
+            the purely protein-consuming Tutsi, who feed on blood, bone marrow, and meat.
+        </p>
+        <p>
+            &copy;
+            <a href="https://ancientcivilizationsworld.com/food/#Food_in_the_Ancient_World_Humanitys_Most_Important_Achievement">
+                Ancientcivilizationsworld.com
+            </a>
+        </p>
+
+</section>
+
+<section class="ve-favorites">
+    <a href="" class="ve-favorite-item">
+        <img src="">
+        <p>test</p>
+    </a>
+</section>
+
+<footer class="ve-footer">
+
+</footer>
+</body>
+</html>
