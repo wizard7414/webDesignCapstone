@@ -3,6 +3,7 @@
     background-repeat: no-repeat no-repeat;
     background-position: center 30%;
     background-size: 100%;
+    box-shadow: 0 0 25px 0 rgba(34, 60, 80, 0.4);
 }
 
 #menuScreens {
@@ -21,32 +22,149 @@
     cursor:pointer;
 }
 
+.ve-large-padding {
+    padding: 60px;
+}
+
+.ve-greeting {
+
+}
+
 .ve-greeting h2 {
     display: block;
     text-align: center;
     margin-bottom: 30px;
+    color: #e3714a;
 }
 
 .ve-chapter h2 {
     display: block;
     text-align: center;
     margin-bottom: 30px;
+    color: #e3714a;
+}
+
+.ve-favorites h2 {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #e3714a;
 }
 
 .ve-recipe-list h2 {
     display: block;
     text-align: center;
     margin-bottom: 30px;
+    color: #e3714a;
+}
+
+.ve-ingredients h2 {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #e3714a;
+}
+
+.ve-instructions h2 {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #e3714a;
+}
+
+.ve-favorites-list {
+    display: block;
+}
+
+.ve-favorite-item {
+    padding: 30px;
+    width: 300px;
+    background-color: #8acd7b;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px 5px rgba(34, 60, 80, 0.4);
+}
+
+.ve-favorite-item img {
+    max-width: 100%;
+    display: inline-block;
+    border-radius: 15px;
+    border: 2px solid #e7f09f;
+}
+
+.ve-favorite-item span {
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.ve-recipe-item {
+    padding: 30px;
+    width: 300px;
+    background-color: #cdc67b;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px 5px rgba(34, 60, 80, 0.4);
+}
+
+.ve-recipe-item img {
+    max-width: 100%;
+    display: inline-block;
+    border-radius: 15px;
+    border: 2px solid #e7f09f;
+}
+
+.ve-recipe-item span {
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .ve-footer {
-    background-color: #d97540;
+    background-image: linear-gradient(to bottom, #e6eea6, #698f28);
+    align-items: center;
     height: 5em;
+    display: flex;
+}
+
+.ve-footer div {
+    margin: 0 20px 0 20px;
+}
+
+.ve-nav-item a {
+    color: #000000;
+}
+
+.ve-nav-item a:hover {
+    color: #698f28;
+}
+
+.ve-greeting a {
+    color: #000000;
+}
+
+.ve-greeting a:hover {
+    color: #698f28;
+}
+
+.ve-favorite-item {
+    color: #000000;
+}
+
+.ve-favorite-item:hover {
+    color: #698f28;
+}
+
+.ve-recipe-item {
+    color: #000000;
+}
+
+.ve-recipe-item:hover {
+    color: #698f28;
 }
 
 @media screen and (max-width: 990px) {
     .ve_header {
-        background-image: linear-gradient(to bottom, #d97540, #e6eea6);
+        background-image: linear-gradient(to bottom, #698f28, #e6eea6);
+        box-shadow: 0 0 25px 0 rgba(34, 60, 80, 0.4);
     }
 
     .ve-nav-item {
@@ -61,8 +179,8 @@
 
     .ve-greeting {
         padding: 20px;
-        border-top: 4px solid #e7f09f;
         border-bottom: 4px solid #e7f09f;
+        box-shadow: 0 0 15px 0 rgba(34, 60, 80, 0.4);
     }
 
     .ve-greeting img {
@@ -72,11 +190,76 @@
         margin-right: auto;
         margin-bottom: 20px;
         border-bottom: 4px solid #e7f09f;
+        box-shadow: 0 15px 15px 10px rgba(34, 60, 80, 0.4);
+    }
 
+    .ve-chapter {
+        padding: 30px;
+        border-top: 4px solid #e7f09f;
+        border-bottom: 4px solid #e7f09f;
+        box-shadow: 0 10px 15px 5px rgba(34, 60, 80, 0.4);
+    }
+
+    .ve-chapter img {
+        width: 300px;
+        display: grid;
+        margin: 0 auto 30px auto;
+        border-right: 4px solid #e7f09f;
+    }
+
+    .ve-favorites {
+        padding: 20px;
+    }
+
+    .ve-favorite-item {
+        margin-bottom: 20px;
+    }
+
+    .ve-recipe-list {
+        padding: 20px;
+    }
+
+    .ve-ingredients {
+        padding: 20px;
+        border-bottom: 4px solid #e7f09f;
+        box-shadow: 0 10px 15px 5px rgba(34, 60, 80, 0.4);
+    }
+
+    .ve-ingredients-block {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .ve-instructions {
+        padding: 20px;
+        display: grid;
+        justify-content: center;
+    }
+
+    .ve-instructions img {
+        height: 300px;
+        display: grid;
+        margin: 30px auto 30px auto;
+        border-right: 8px solid #e7f09f;
+        box-shadow: 0 15px 15px 10px rgba(34, 60, 80, 0.4);
+    }
+
+    .ve-instructions-step {
+        display: block;
+        horiz-align: center;
+        width: 400px;
+    }
+
+    .ve-footer {
+        display: grid;
     }
 }
 
 @media screen and (min-width: 991px) and (max-width: 1499px){
+    .ve_header {
+        border-bottom: 4px solid #e7f09f;
+    }
+
     .ve_nav {
         height: 15em;
     }
@@ -139,6 +322,7 @@
         padding: 30px;
         border-top: 4px solid #e7f09f;
         border-bottom: 4px solid #e7f09f;
+        box-shadow: 0 0 25px 0 rgba(34, 60, 80, 0.4);
     }
 
     .ve-greeting img {
@@ -146,8 +330,61 @@
         margin: 0 30px 30px 0;
         float: left;
         border-right: 4px solid #e7f09f;
+        box-shadow: 0 15px 25px 10px rgba(34, 60, 80, 0.4);
     }
 
+    .ve-chapter {
+        padding: 30px;
+        border-bottom: 4px solid #e7f09f;
+        box-shadow: 0 10px 15px 5px rgba(34, 60, 80, 0.4);
+    }
+
+    .ve-chapter img {
+        height: 300px;
+        margin: 0 30px 30px 0;
+        float: left;
+        border-right: 4px solid #e7f09f;
+    }
+
+    .ve-favorites {
+        padding: 30px;
+    }
+
+    .ve-favorites-list {
+        display: flex;
+    }
+
+    .ve-recipe-list {
+        padding: 30px;
+    }
+
+    .ve-ingredients {
+        padding: 30px;
+        border-bottom: 4px solid #e7f09f;
+        box-shadow: 0 10px 15px 5px rgba(34, 60, 80, 0.4);
+    }
+
+    .ve-ingredients-block {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .ve-instructions {
+        padding: 30px;
+        align-items: center;
+    }
+
+    .ve-instructions-step {
+        display: flex;
+    }
+
+    .ve-instructions img {
+        height: 300px;
+        margin: 0 30px 30px 0;
+        float: left;
+        border-right: 8px solid #e7f09f;
+        box-shadow: 0 15px 15px 10px rgba(34, 60, 80, 0.4);
+    }
 }
 
 @media screen and (min-width: 1500px) {
@@ -213,6 +450,7 @@
     .ve-greeting {
         padding: 60px;
         border-bottom: 8px solid #e7f09f;
+        box-shadow: 0 0 25px 0 rgba(34, 60, 80, 0.4);
     }
 
     .ve-greeting img {
@@ -220,12 +458,13 @@
         margin: 0 60px 60px 0;
         float: left;
         border-right: 8px solid #e7f09f;
+        box-shadow: 0 15px 25px 10px rgba(34, 60, 80, 0.4);
     }
 
     .ve-chapter {
         padding: 60px;
-        border-top: 8px solid #e7f09f;
         border-bottom: 8px solid #e7f09f;
+        box-shadow: 0 10px 15px 5px rgba(34, 60, 80, 0.4);
     }
 
     .ve-chapter img {
@@ -235,30 +474,44 @@
         border-right: 8px solid #e7f09f;
     }
 
-    .ve-recipe-list {
+    .ve-favorites {
         padding: 60px;
-        border-bottom: 8px solid #e7f09f;
     }
 
-    .ve-recipe-item {
-        padding: 30px;
-        width: 300px;
-        background-color: #cdc67b;
-        border-radius: 15px;
+    .ve-favorites-list {
+        display: flex;
+    }
+
+    .ve-recipe-list {
+        padding: 60px;
+    }
+
+    .ve-ingredients {
+        padding: 60px;
+        border-bottom: 8px solid #e7f09f;
         box-shadow: 0 10px 15px 5px rgba(34, 60, 80, 0.4);
     }
 
-    .ve-recipe-item img {
-        max-width: 100%;
-        display: inline-block;
-        border-radius: 15px;
-        border: 2px solid #e7f09f;
+    .ve-ingredients-block {
+        display: flex;
+        justify-content: space-around;
     }
 
-    .ve-recipe-item span {
-        display: inline-block;
-        text-align: center;
-        margin-top: 10px;
+    .ve-instructions {
+        padding: 60px 300px 50px 300px;
+        align-items: center;
+    }
+
+    .ve-instructions-step {
+        display: flex;
+    }
+
+    .ve-instructions img {
+        height: 300px;
+        margin: 0 30px 30px 0;
+        float: left;
+        border-right: 8px solid #e7f09f;
+        box-shadow: 0 15px 15px 10px rgba(34, 60, 80, 0.4);
     }
 }
 
